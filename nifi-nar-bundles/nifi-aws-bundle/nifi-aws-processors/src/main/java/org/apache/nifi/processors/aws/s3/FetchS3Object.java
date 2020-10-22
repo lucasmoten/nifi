@@ -98,7 +98,9 @@ public class FetchS3Object extends AbstractS3Processor {
             .name("range-start")
             .displayName("Range Start")
             .required(false)
-            .description("In conjunction with Range End, these properties control the range of bytes to be requested of the object from the S3 bucket. A value of 0 indicates the first byte of the object. Range-End must be greater than or equal to Range-Start.")
+            .description("In conjunction with Range End, these properties control the range of bytes to be requested of the object "
+                    + "from the S3 bucket. A value of 0 indicates the first byte of the object. Range-End must be greater than or "
+                    + "equal to Range-Start.")
             .addValidator(StandardValidators.LONG_VALIDATOR)
             .expressionLanguageSupported(ExpressionLanguageScope.FLOWFILE_ATTRIBUTES)
             .defaultValue("0")
@@ -108,7 +110,9 @@ public class FetchS3Object extends AbstractS3Processor {
             .name("range-end")
             .displayName("Range End")
             .required(false)
-            .description("In conjunction with Range Start, these properties control the range of bytes to be requested of the object from the S3 bucket. A value of -1 indicates the last byte of the object. Range-End must be greater than or equal to Range-Start.")
+            .description("In conjunction with Range Start, these properties control the range of bytes to be requested of the object "
+                    + "from the S3 bucket. A value of -1 indicates the last byte of the object. Range-End must be greater than or "
+                    + "equal to Range-Start.")
             .addValidator(StandardValidators.LONG_VALIDATOR)
             .expressionLanguageSupported(ExpressionLanguageScope.FLOWFILE_ATTRIBUTES)
             .defaultValue("-1")
